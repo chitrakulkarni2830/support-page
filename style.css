@@ -13,25 +13,24 @@ body {
     background-repeat: repeat;
     border: 4px dashed var(--mocha-dark);
     border-radius: 20px;
-    min-height: 100vh;
-    min-height: calc(100vh - 20px);
+    min-height: auto; /* Changed from 100vh to prevent vertical clipping */
     margin: 10px;
-    padding: 16px;
+    padding: 24px 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Let it flow naturally top-to-bottom */
     align-items: center;
     font-family: 'Quicksand', sans-serif;
 }
 
 .support-card {
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 3px dashed var(--mocha-dark);
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 16px;
     width: 100%;
     max-width: 400px; /* Keeps it compact on desktop, full-width on mobile */
     box-sizing: border-box;
@@ -40,11 +39,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 16px;
 }
 
 /* Ensure the cat image scales fluidly */
 .support-card img, .cat-container img {
     max-width: 100%;
+    width: 220px;
     height: auto;
 }
 
@@ -63,7 +64,7 @@ body {
 
 .pay-btn:hover {
     opacity: 0.95;
-    transform: translateY(-2px)
+    transform: translateY(-2px);
 }
 
 .sticker {
@@ -116,7 +117,7 @@ body {
 
 .coffee2 {
     bottom: 5%;
-    right:15%;
+    right: 15%;
     width: 65px;
     transform: rotate(12deg);
     animation-delay: 0s;
@@ -145,6 +146,7 @@ body {
     transform: rotate(-15deg);
     animation-delay: 2s;
 }
+
 .prints2 {
     bottom: 80%;
     left: 80%;
@@ -202,7 +204,7 @@ body {
 }
 
 .sparkle4 {
-    bottom:50%;
+    bottom: 50%;
     left: 20%;
     width: 90px;
     transform: rotate(-15deg);
@@ -226,14 +228,12 @@ body {
 }
 
 .prints4 {
-   bottom: 55%;
+    bottom: 55%;
     left: 65%;
     width: 60px;
     transform: rotate(-15deg);
     animation-delay: 2s;
 }
-
-
 
 @keyframes floatAnimation {
     0%, 100% {
