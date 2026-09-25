@@ -65,17 +65,6 @@ p {
     box-shadow: 0 20px 50px rgba(91, 58, 47, 0.12);
 }
 
-.support-card::before {
-    display: block;
-    margin-bottom: 14px;
-    color: var(--rose-dark);
-    content: 'Scan to support';
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
 .support-card img {
     display: block;
     width: min(100%, 250px);
