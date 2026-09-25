@@ -9,37 +9,43 @@
 
 body {
     background-color: var(--linen);
-    background-image: radial-gradient(var(--dust-grey) 1px, transparent 1px);
-    background-size: 20px 20px;
-    border: 6px dashed var(--mocha-dark);
-    border-radius: 24px;
-    min-height: calc(100vh - 24px);
-    margin: 16px;
-    padding: 32px;
+    background-image: url("..."); /* keep your background SVG */
+    background-repeat: repeat;
+    border: 4px dashed var(--mocha-dark);
+    border-radius: 20px;
+    min-height: 100vh;
+    min-height: calc(100vh - 20px);
+    margin: 10px;
+    padding: 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
     align-items: center;
     font-family: 'Quicksand', sans-serif;
 }
 
-h1, h2, .title {
-    font-family: 'Fredoka', sans-serif;
-}
-
 .support-card {
-    background: #e3d5ca;
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 3px double var(--mocha-dark);
-    border-radius: 24px;
-    padding: 32px;
-    box-shadow: 0 30px 32px rgba(7, 7, 7, 0.08);
-    text-align: center;
-    max-width: 400px;
+    border: 3px dashed var(--mocha-dark);
+    border-radius: 20px;
+    padding: 20px;
     width: 100%;
+    max-width: 400px; /* Keeps it compact on desktop, full-width on mobile */
+    box-sizing: border-box;
+    box-shadow: 0 12px 32px rgba(74, 59, 50, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ensure the cat image scales fluidly */
+.support-card img, .cat-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 .pay-btn {
